@@ -243,4 +243,23 @@
     });
 
 
+
+    /* ---------- Family flip cards (tap / keyboard) ---------- */
+    $$(".flip-card").forEach(function (card) {
+        const flip = function () {
+            const flipped = card.classList.toggle("flipped");
+            card.setAttribute("aria-pressed", String(flipped));
+        };
+
+        card.addEventListener("click", flip);
+
+        card.addEventListener("keydown", function (event) {
+            if (event.key === "Enter" || event.key === " ") {
+                event.preventDefault();
+                flip();
+            }
+        });
+    });
+
+
 })();
