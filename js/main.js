@@ -109,4 +109,46 @@
     }
 
 
+    /* ---------- Scroll reveal (staggered) ---------- */
+    const revealElements = $$(".reveal");
+
+    revealElements.forEach(function (element) {
+        const index = Array.from(element.parentElement.children).indexOf(element);
+        element.style.setProperty("--delay", Math.min(index, 5) * 0.07 + "s");
+    });
+
+    if ("IntersectionObserver" in window) {
+        const revealObserver = new IntersectionObserver(function (entries, observer) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12 });
+
+        revealElements.forEach(function (element) {
+            revealObserver.observe(element);
+        });
+    } else {
+        revealElements.forEach(function (element) {
+            element.classList.add("visible");
+        });
+    }
+
+
+    /* ---------- Timeline "Show more" ---------- */
+    $$(".toggle-more").forEach(function (button) {
+        button.addEventListener("click", function () {
+            const card = button.closest(".timeline-card");
+            if (!card) return;
+
+            const expanded = card.classList.toggle("expanded");
+
+            button.textContent = expanded ? "Show less" : "Show more";
+            button.setAttribute("aria-expanded", String(expanded));
+        });
+    });
+
+
 })();
