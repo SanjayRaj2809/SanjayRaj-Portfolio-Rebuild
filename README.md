@@ -26,3 +26,7 @@ The original Interests section, styles, media assets and looping video interacti
 
 ## Phase 4: Family
 The original Family section, warm section-scoped styles, family photographs, and flip-card interactions have been added from the supplied portfolio ZIP.
+
+
+## Phase 5: Hobbies Gallery
+The original Hobbies gallery, image assets, and vanilla JavaScript lightbox have been added from the supplied portfolio ZIP.
