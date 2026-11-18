@@ -5,42 +5,42 @@
 ================================= */
 
 :root {
-    --bg-primary: #1a1a2e;
-    --bg-secondary: #16213e;
-    --bg-card: #0f3460;
-    --bg-elevated: #16213e;
+    --bg-primary: #211813;
+    --bg-secondary: #302219;
+    --bg-card: #3b2a20;
+    --bg-elevated: #493326;
 
-    --accent-primary: #1abc9c;
-    --accent-secondary: #48d1cc;
-    --on-accent: #1a1a2e;
+    --accent-primary: #e6a15a;
+    --accent-secondary: #f2c078;
+    --on-accent: #211813;
 
-    --text-primary: #e0e0e0;
-    --text-secondary: #a0a0a0;
+    --text-primary: #fff1df;
+    --text-secondary: #c9b39d;
 
-    --border-color: #2a2a4a;
+    --border-color: #624833;
     --border-strong: rgba(255, 255, 255, 0.16);
-    --shadow-color: rgba(0, 0, 0, 0.4);
-    --nav-bg: rgba(9, 13, 22, 0.72);
-    --overlay: rgba(3, 5, 9, 0.9);
-    --success: #34d399;
+    --shadow-color: rgba(15, 8, 4, 0.45);
+    --nav-bg: rgba(33, 24, 19, 0.82);
+    --overlay: rgba(18, 11, 7, 0.9);
+    --success: #a3be8c;
     /* Skill card glow */
---skill-border-hover: #1abc9c;
---skill-shadow: rgba(26, 188, 156, 0.16);
---skill-icon-bg: rgba(26, 188, 156, 0.10);
---skill-icon-hover-bg: rgba(26, 188, 156, 0.18);
---skill-icon-glow: rgba(26, 188, 156, 0.25);
+--skill-border-hover: #e6a15a;
+--skill-shadow: rgba(230, 161, 90, 0.18);
+--skill-icon-bg: rgba(230, 161, 90, 0.10);
+--skill-icon-hover-bg: rgba(230, 161, 90, 0.18);
+--skill-icon-glow: rgba(230, 161, 90, 0.25);
 
 /* Hero text flicker */
---hero-flicker-glow: rgba(26, 188, 156, 0.35);
+--hero-flicker-glow: rgba(230, 161, 90, 0.35);
 
     /* Family section warm sub-palette */
-    --warm-bg: #110d0b;
-    --warm-card: #1a1411;
-    --warm-elevated: #251c17;
-    --warm-accent: #f2a65a;
-    --warm-accent-soft: #ffd2a0;
-    --warm-text-secondary: #b8a595;
-    --warm-border: rgba(255, 210, 160, 0.12);
+    --warm-bg: #211813;
+    --warm-card: #302219;
+    --warm-elevated: #493326;
+    --warm-accent: #e6a15a;
+    --warm-accent-soft: #f2c078;
+    --warm-text-secondary: #c9b39d;
+    --warm-border: rgba(242, 192, 120, 0.16);
 
     --font-main: "Inter", "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
     --font-mono: ui-monospace, "JetBrains Mono", "Cascadia Code", Consolas, monospace;
