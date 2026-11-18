@@ -30,6 +30,7 @@
         <nav class="nav-menu" id="navMenu" aria-label="Main navigation">
             <a href="#hero">Home</a>
             <a href="#journey">Journey</a>
+            <a href="#interests">Interests</a>
         </nav>
         <div class="nav-actions">
             <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">☀</button>
@@ -140,6 +141,159 @@
                         <button class="toggle-more" aria-expanded="false">Show more</button>
                     </div>
                 </article>
+            </div>
+        </section>
+
+
+
+    <!-- INTERESTS -->
+    <section class="section interests" id="interests">
+            <div class="section-heading reveal">
+                <p class="section-label">04 / Beyond code</p>
+                <h2>My Personal <span>Interests</span></h2>
+                <p>A few things that keep me inspired and entertained.</p>
+            </div>
+
+            <div class="interests-grid">
+
+                <!-- GAMING (big, looping clips) -->
+                <article class="interest-card gaming-card span-3 spot reveal">
+                    <div class="clip-player">
+                        <div class="clip-stage">
+                            <div class="clip media active" data-placeholder="RDR 2 CLIP">
+                                <video src="videos/gaming/rdr2.mp4" muted playsinline preload="metadata" aria-label="Red Dead Redemption 2 gameplay clip"></video>
+                            </div>
+                            <div class="clip media" data-placeholder="GTA 5 CLIP">
+                                <video src="videos/gaming/gta5.mp4" muted playsinline preload="metadata" aria-label="GTA 5 gameplay clip"></video>
+                            </div>
+                            <div class="clip media" data-placeholder="VALORANT CLIP">
+                                <video src="videos/gaming/valorant.mp4" muted playsinline preload="metadata" aria-label="Valorant gameplay clip"></video>
+                            </div>
+                        </div>
+                        <div class="interest-content">
+                            <span class="interest-category">01 · Gaming</span>
+                            <h3>Gaming</h3>
+                            <p>Assassin's Creed is my favourite, along with GTA, RDR 2 and Valorant.</p>
+                            <div class="clip-tabs">
+                                <button class="clip-tab active" type="button">RDR 2</button>
+                                <button class="clip-tab" type="button">GTA 5</button>
+                                <button class="clip-tab" type="button">Valorant</button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- MOVIES & SERIES (posters) -->
+                <article class="interest-card movies-card span-2 spot reveal">
+                    <div class="posters">
+                        <button class="poster media" type="button" data-lightbox="images/interests/movies/meiyazhagan.jpg" data-title="Meiyazhagan" data-placeholder="MEIYAZHAGAN">
+                            <img src="images/interests/movies/meiyazhagan.jpg" alt="Meiyazhagan movie poster" loading="lazy">
+                            <span class="poster-label">Meiyazhagan</span>
+                        </button>
+                        <button class="poster media" type="button" data-lightbox="images/interests/movies/chhichhore.jpg" data-title="Chhichhore" data-placeholder="CHHICHHORE">
+                            <img src="images/interests/movies/chhichhore.jpg" alt="Chhichhore movie poster" loading="lazy">
+                            <span class="poster-label">Chhichhore</span>
+                        </button>
+                        <button class="poster media" type="button" data-lightbox="images/interests/movies/harry-potter.jpg" data-title="Harry Potter" data-placeholder="HARRY POTTER">
+                            <img src="images/interests/movies/harry-potter.jpg" alt="Harry Potter poster" loading="lazy">
+                            <span class="poster-label">Harry Potter</span>
+                        </button>
+                        <button class="poster media" type="button" data-lightbox="images/interests/movies/peaky-blinders.jpg" data-title="Peaky Blinders" data-placeholder="PEAKY BLINDERS">
+                            <img src="images/interests/movies/peaky-blinders.jpg" alt="Peaky Blinders series poster" loading="lazy">
+                            <span class="poster-label">Peaky Blinders</span>
+                        </button>
+                    </div>
+                    <div class="interest-content">
+                        <span class="interest-category">02 · Entertainment</span>
+                        <h3>Movies &amp; Series</h3>
+                        <p>Peaky Blinders, Meiyazhagan, Chhichhore and Harry Potter are among my favourites.</p>
+                    </div>
+                </article>
+
+                <!-- SPORTS (looping clips) -->
+                <article class="interest-card sports-card spot reveal">
+                    <div class="clip-player">
+                        <div class="clip-stage">
+                            <div class="clip media active" data-placeholder="BADMINTON CLIP">
+                                <video src="videos/sports/badminton.mp4" muted playsinline preload="metadata" aria-label="Badminton clip"></video>
+                            </div>
+                            <div class="clip media" data-placeholder="CRICKET CLIP">
+                                <video src="videos/sports/cricket.mp4" muted playsinline preload="metadata" aria-label="Cricket clip"></video>
+                            </div>
+                        </div>
+                        <div class="interest-content">
+                            <span class="interest-category">03 · Sports</span>
+                            <h3>Sports</h3>
+                            <p>I enjoy playing and following sports. Badminton and cricket are my favourites.</p>
+                            <div class="clip-tabs">
+                                <button class="clip-tab active" type="button">Badminton</button>
+                                <button class="clip-tab" type="button">Cricket</button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                 <!-- MUSIC (animated player) -->
+                <article class="interest-card music-card span-3 spot reveal">
+                    <div class="player playing" id="musicPlayer">
+                        <div class="vinyl" aria-hidden="true"><span class="vinyl-label"></span></div>
+
+                        <div class="player-body">
+                            <span class="interest-category">04 · Music</span>
+                            <h3 id="trackTitle">Anirudh Mix</h3>
+                            <p id="trackSub">Music is something I enjoy every day.</p>
+
+                            <div class="eq" aria-hidden="true">
+                                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+                            </div>
+
+                            <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+
+                            <div class="player-controls">
+                                <button class="ctrl" id="prevTrack" type="button" aria-label="Previous track">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 5h2v14H6zM20 5v14L9 12z"/></svg>
+                                </button>
+                                <button class="ctrl ctrl-main" id="playToggle" type="button" aria-label="Pause" aria-pressed="true">
+                                    <svg class="icon-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+                                    <svg class="icon-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg>
+                                </button>
+                                <button class="ctrl" id="nextTrack" type="button" aria-label="Next track">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 5h2v14h-2zM4 5v14l11-7z"/></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                                <!-- FOOD -->
+                <article class="interest-card spot reveal">
+                    <div class="interest-visual" aria-hidden="true">🍛</div>
+                    <div class="interest-content">
+                        <span class="interest-category">05 · Food</span>
+                        <h3>Food &amp; Cuisine</h3>
+                        <p>Biryani is one of my favourite dishes. I enjoy exploring different flavours and cuisines.</p>
+                    </div>
+                </article>
+
+                <!-- BOOKS -->
+                <article class="interest-card spot reveal">
+                    <div class="interest-visual" aria-hidden="true">📚</div>
+                    <div class="interest-content">
+                        <span class="interest-category">06 · Reading</span>
+                        <h3>Books</h3>
+                        <p>I enjoy discovering new stories, ideas and perspectives through reading.</p>
+                    </div>
+                </article>
+
+                <!-- TRAVEL -->
+                <article class="interest-card spot reveal">
+                    <div class="interest-visual" aria-hidden="true">✈️</div>
+                    <div class="interest-content">
+                        <span class="interest-category">07 · Travel</span>
+                        <h3>Travel</h3>
+                        <p>Exploring new places, experiencing different cultures and making memories. Goa is one of my favourite destinations.</p>
+                    </div>
+                </article>
+               
+
             </div>
         </section>
 

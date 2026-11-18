@@ -18,3 +18,7 @@ This phase adds the original Professional Journey timeline from the supplied San
 - `images/hero/profile.png`
 - `images/logo.png`
 - `resume.pdf`
+
+
+## Phase 3: Personal Interests
+The original Interests section, styles, media assets and looping video interactions have been added from the supplied portfolio ZIP.
