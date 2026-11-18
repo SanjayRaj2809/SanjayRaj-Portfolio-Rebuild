@@ -131,3 +131,27 @@ ul { list-style: none; }
     html { scroll-behavior: auto; }
     *, *::before, *::after { animation: none !important; transition: none !important; }
 }
+
+
+/* ---------- Professional Journey (original ZIP) ---------- */
+/* ---------- Timeline ---------- */
+.timeline { position: relative; padding-left: 36px; }
+.timeline::before { content: ""; position: absolute; left: 5px; top: 8px; bottom: 8px; width: 1px; background: var(--border-strong); }
+.timeline-item { position: relative; margin-bottom: 20px; }
+.timeline-item::before {
+    content: ""; position: absolute; left: -36px; top: 32px; width: 11px; height: 11px; border-radius: 50%;
+    background: var(--bg-primary); border: 2px solid var(--accent-primary);
+    box-shadow: 0 0 0 5px color-mix(in srgb, var(--accent-primary) 18%, transparent);
+}
+.timeline-card { padding: 28px; }
+.timeline-card h3 { font-size: 1.25rem; letter-spacing: -0.02em; margin: 10px 0 2px; }
+.timeline-card h4 { font-size: 0.95rem; font-weight: 500; color: var(--accent-primary); margin-bottom: 12px; }
+.timeline-card p { color: var(--text-secondary); }
+.timeline-more { display: grid; grid-template-rows: 0fr; transition: grid-template-rows 0.4s ease; }
+.timeline-more > div { overflow: hidden; }
+.timeline-more p { margin-top: 10px; }
+.timeline-card.expanded .timeline-more { grid-template-rows: 1fr; }
+.timeline-highlight { display: inline-block; padding: 4px 12px; border-radius: 999px; background: var(--bg-elevated); color: var(--accent-secondary) !important; font-family: var(--font-mono); font-size: 0.8rem; }
+.toggle-more { margin-top: 16px; font-size: 0.85rem; font-weight: 600; color: var(--accent-primary); }
+.toggle-more:hover { color: var(--accent-secondary); }
+

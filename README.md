@@ -1,17 +1,14 @@
 # SANJAYRAJ RA – Personal Portfolio
 
-## Phase 1: Hero Section
+## Phase 2: Professional Journey
 
-This phase contains the original Hero section and its required shared navigation/theme foundation, extracted from the supplied `SanjayRaj-Portfolio` ZIP.
+This phase adds the original Professional Journey timeline from the supplied SanjayRaj-Portfolio ZIP to the completed Hero phase. The original timeline content, markup, styles, Show more interaction, and scroll-reveal behavior are retained.
 
 ## Tech Stack
 - HTML5
 - CSS3
 - Vanilla JavaScript
 - Git and GitHub
-
-## Run locally
-Open `index.html` in a browser, or use the VS Code Live Server extension if already installed.
 
 ## Structure
 - `index.html`
@@ -20,3 +17,4 @@ Open `index.html` in a browser, or use the VS Code Live Server extension if alre
 - `js/main.js`
 - `images/hero/profile.png`
 - `images/logo.png`
+- `resume.pdf`
