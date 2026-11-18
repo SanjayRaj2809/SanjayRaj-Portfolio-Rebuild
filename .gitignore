@@ -1,0 +1,17 @@
+# VS Code settings
+.vscode/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Private environment files
+.env
+.env.*
+
+# Dependencies
+node_modules/
+
+# Logs
+*.log

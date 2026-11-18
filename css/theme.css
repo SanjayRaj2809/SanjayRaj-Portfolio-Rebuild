@@ -1,0 +1,95 @@
+/* =================================
+   THEME - the ONLY file with colours,
+   fonts, sizes. Change here = site changes.
+   Default: Black / Midnight Blue
+================================= */
+
+:root {
+    --bg-primary: #05070d;
+    --bg-secondary: #090d16;
+    --bg-card: #0c1220;
+    --bg-elevated: #121b2e;
+
+    --accent-primary: #4d8dff;
+    --accent-secondary: #22d3ee;
+    --on-accent: #05070d;
+
+    --text-primary: #f2f5fb;
+    --text-secondary: #8c99b0;
+
+    --border-color: rgba(255, 255, 255, 0.07);
+    --border-strong: rgba(255, 255, 255, 0.16);
+    --shadow-color: rgba(0, 0, 0, 0.5);
+    --nav-bg: rgba(9, 13, 22, 0.72);
+    --overlay: rgba(3, 5, 9, 0.9);
+    --success: #34d399;
+    /* Skill card glow */
+--skill-border-hover: #4285ff;
+--skill-shadow: rgba(50, 120, 255, 0.16);
+--skill-icon-bg: rgba(55, 115, 220, 0.10);
+--skill-icon-hover-bg: rgba(55, 115, 220, 0.18);
+--skill-icon-glow: rgba(55, 115, 255, 0.25);
+
+/* Hero text flicker */
+--hero-flicker-glow: rgba(75, 145, 255, 0.35);
+
+    /* Family section warm sub-palette */
+    --warm-bg: #110d0b;
+    --warm-card: #1a1411;
+    --warm-elevated: #251c17;
+    --warm-accent: #f2a65a;
+    --warm-accent-soft: #ffd2a0;
+    --warm-text-secondary: #b8a595;
+    --warm-border: rgba(255, 210, 160, 0.12);
+
+    --font-main: "Inter", "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+    --font-mono: ui-monospace, "JetBrains Mono", "Cascadia Code", Consolas, monospace;
+    --font-size-base: 16px;
+    --font-size-hero: clamp(2.8rem, 8vw, 5.6rem);
+    --font-size-h2: clamp(2rem, 5vw, 3.2rem);
+
+    --section-padding: clamp(80px, 11vw, 130px);
+    --gutter: clamp(20px, 6vw, 48px);
+    --container-width: 1120px;
+    --border-radius: 20px;
+    --radius-sm: 12px;
+    --transition: 0.3s ease;
+}
+
+[data-theme="light"] {
+    --bg-primary: #f5f7fb;
+    --bg-secondary: #eaeff7;
+    --bg-card: #ffffff;
+    --bg-elevated: #eef2fa;
+
+    --accent-primary: #1f63e0;
+    --accent-secondary: #0891b2;
+    --on-accent: #ffffff;
+
+    --text-primary: #0b1220;
+    --text-secondary: #55647d;
+
+    --border-color: rgba(10, 30, 70, 0.1);
+    --border-strong: rgba(10, 30, 70, 0.2);
+    --shadow-color: rgba(10, 30, 70, 0.12);
+    --nav-bg: rgba(255, 255, 255, 0.78);
+    --overlay: rgba(235, 240, 250, 0.92);
+
+    --warm-bg: #fbf3ea;
+    --warm-card: #fffaf4;
+    --warm-elevated: #f6e8d8;
+    --warm-accent: #c2661a;
+    --warm-accent-soft: #e08a3c;
+    --warm-text-secondary: #7a6552;
+    --warm-border: rgba(150, 90, 30, 0.18);
+
+        /* Skill card glow */
+    --skill-border-hover: #1f63e0;
+    --skill-shadow: rgba(31, 99, 224, 0.14);
+    --skill-icon-bg: rgba(31, 99, 224, 0.08);
+    --skill-icon-hover-bg: rgba(31, 99, 224, 0.15);
+    --skill-icon-glow: rgba(31, 99, 224, 0.22);
+
+    /* Hero text flicker */
+    --hero-flicker-glow: rgba(31, 99, 224, 0.30);
+}
