@@ -262,4 +262,91 @@
     });
 
 
+
+    /* ---------- Lightbox (images + write-ups) ---------- */
+    const lightbox = $("#lightbox");
+    const lightboxImage = $("#lightboxImage");
+    const lightboxMedia = $("#lightboxMedia");
+    const lightboxTitle = $("#lightboxTitle");
+    const lightboxText = $("#lightboxText");
+    const lightboxClose = $("#lightboxClose");
+
+    let lastFocused = null;
+
+    const openLightbox = function (trigger) {
+        if (
+            !lightbox ||
+            !lightboxImage ||
+            !lightboxMedia ||
+            !lightboxTitle ||
+            !lightboxText ||
+            !lightboxClose
+        ) return;
+
+        const title = trigger.getAttribute("data-title") || "";
+        const text = trigger.getAttribute("data-text") || "";
+
+        lastFocused = trigger;
+
+        lightboxMedia.classList.remove("is-empty");
+        lightboxMedia.setAttribute("data-placeholder", title);
+
+        lightboxImage.setAttribute("src", trigger.getAttribute("data-lightbox"));
+        lightboxImage.setAttribute("alt", title || "Expanded view");
+
+        lightboxTitle.textContent = title;
+        lightboxText.textContent = text;
+        lightboxText.hidden = !text;
+
+        lightbox.classList.add("active");
+        lightbox.setAttribute("aria-hidden", "false");
+        document.body.classList.add("no-scroll");
+
+        lightboxClose.focus();
+    };
+
+    const closeLightbox = function () {
+        if (!lightbox || !lightboxImage || !lightbox.classList.contains("active")) {
+            return;
+        }
+
+        lightbox.classList.remove("active");
+        lightbox.setAttribute("aria-hidden", "true");
+        lightboxImage.removeAttribute("src");
+
+        document.body.classList.remove("no-scroll");
+
+        if (lastFocused) {
+            lastFocused.focus();
+        }
+    };
+
+    if (lightbox && lightboxImage && lightboxClose) {
+        $$("[data-lightbox]").forEach(function (item) {
+            item.addEventListener("click", function () {
+                openLightbox(item);
+            });
+        });
+
+        lightboxClose.addEventListener("click", closeLightbox);
+
+        lightbox.addEventListener("click", function (event) {
+            if (event.target === lightbox) {
+                closeLightbox();
+            }
+        });
+
+        document.addEventListener("keydown", function (event) {
+            if (event.key === "Escape") {
+                closeLightbox();
+            }
+
+            if (event.key === "Tab" && lightbox.classList.contains("active")) {
+                event.preventDefault();
+                lightboxClose.focus();
+            }
+        });
+    }
+
+
 })();
