@@ -1,0 +1,35 @@
+
+name: Pull Request Checks
+
+on:
+  pull_request:
+    branches:
+      - develop
+      - main
+
+jobs:
+  checks:
+    name: Review Website Changes
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Check required files
+        run: |
+          test -f index.html
+          test -f css/theme.css
+          test -f css/style.css
+          test -f js/main.js
+
+      - name: Validate HTML
+        run: npx --yes htmlhint@1.1.4 index.html
+
+      - name: Validate JavaScript
+        run: node --check js/main.js

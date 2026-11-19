@@ -1,0 +1,27 @@
+
+name: Workflow Notifications
+
+on:
+  workflow_run:
+    workflows:
+      - Validate Website
+      - Pull Request Checks
+      - Deploy to GitHub Pages
+    types:
+      - completed
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Create workflow notification
+        env:
+          WORKFLOW_NAME: ${{ github.event.workflow_run.name }}
+          WORKFLOW_STATUS: ${{ github.event.workflow_run.conclusion }}
+          COMMIT_ID: ${{ github.event.workflow_run.head_sha }}
+        run: |
+          echo "## Workflow Notification" >> $GITHUB_STEP_SUMMARY
+          echo "Workflow: $WORKFLOW_NAME" >> $GITHUB_STEP_SUMMARY
+          echo "Status: $WORKFLOW_STATUS" >> $GITHUB_STEP_SUMMARY
+          echo "Commit: $COMMIT_ID" >> $GITHUB_STEP_SUMMARY
